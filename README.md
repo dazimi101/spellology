@@ -30,7 +30,7 @@ First version (w/ Swing) complete (July 4 2022) but project still [active](#futu
 
 - Generates permutations of user's inputted word.
 
-**FileReader.java**
+**TxtReader.java**
 
 - Reads from ReferenceText.txt (written with external help).
 

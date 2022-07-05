@@ -1,8 +1,14 @@
 import java.util.ArrayList;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedReader;
 
 public class SpellcheckDatabase {
+  public String bookTitle;
+  private String filepath = "src/ReferenceText.txt";
 
-  FileReader reader = new FileReader("src/ReferenceText.txt");
+  TxtReader reader = new TxtReader(filepath);
 
   // To keep track of correct words
   private ArrayList<String> validWordList = new ArrayList<String>();
@@ -15,9 +21,24 @@ public class SpellcheckDatabase {
     while (reader.hasNextWord()) {
       addWord(reader.getNextWord());
     }
+    try {
+      readFirstLine();
+    } catch (IOException e) {
+      System.out.println("ERROR");
+    }
   }
 
-  public void addWord(String word) {
+  private void readFirstLine() throws IOException {
+    File file = new File(filepath);
+
+    BufferedReader br = new BufferedReader(new FileReader(file));
+
+    bookTitle = br.readLine();
+
+    br.close();
+  }
+
+  private void addWord(String word) {
     // pre: recieves word from Reference Text
     // post: returns nothing, and adds word to validWordsList if word is unique
     // and updates frequency list accordingly

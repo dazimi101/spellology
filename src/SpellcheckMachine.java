@@ -15,7 +15,7 @@ public class SpellcheckMachine {
   }
 
   // Replace every letter in user's inputted word
-  public void replaceLetter() {
+  private void replaceLetter() {
     String word;
     for (int i = 97; i <= 122; i++) {
       int asciiValue = i;
@@ -31,7 +31,7 @@ public class SpellcheckMachine {
   }
 
   // Add a letter in every possible spot
-  public void everyPossibleSpot() {
+  private void everyPossibleSpot() {
     String word;
     for (int i = 97; i <= 122; i++) {
       for (int j = 0; j <= wordToPermute.length(); j++) {
@@ -47,7 +47,7 @@ public class SpellcheckMachine {
   }
 
   // Remove a letter form every possible spot
-  public void removeLetter() {
+  private void removeLetter() {
     String word;
     for (int i = 0; i < wordToPermute.length(); i++) {
       StringBuffer str = new StringBuffer(wordToPermute);
@@ -58,7 +58,7 @@ public class SpellcheckMachine {
   }
 
   // Swap adjacent letters
-  public void swapLetter() {
+  private void swapLetter() {
     String word;
     for (int i = 0; i < wordToPermute.length() - 1; i++) {
       StringBuffer str = new StringBuffer(wordToPermute);

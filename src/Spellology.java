@@ -7,10 +7,10 @@ import javax.swing.JTextField;
 import javax.swing.JOptionPane;
 
 public class Spellology {
-  public static String name = "Spellology";
-  public static String textName = "Thus Spoke Zarathustra by Nietzsche";
+  private static String name = "Spellology";
+  private static String textName;
 
-  public static void addToPane(Container pane) {
+  private static void addToPane(Container pane) {
     pane.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
     pane.setLayout(new GridBagLayout());
 
@@ -42,6 +42,8 @@ public class Spellology {
         inputWord = input.getText().toLowerCase();
 
         Spellchecker spellologyApp = new Spellchecker();
+
+        textName = spellologyApp.dic.bookTitle;
 
         /*
          * Check for status of the user's word. If the word needs to be spell checked,
