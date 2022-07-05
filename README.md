@@ -40,7 +40,7 @@ First version (w/ Swing) complete (July 4 2022) but project still [active](#futu
 
 ## Future Improvements
 1. Create executable version of spellology.
-2. Add ability to switch between different texts (using tab, dropdown meny, etc).
+2. Add ability to switch between different texts (using tab, dropdown menu, etc).
 3. Add functionality for sentences/paragraphs.
 4. Implement GUI with JavaFX instead of Swing.
 5. Make spell check process more intelligent (e.g take proximity of letters on QWERTY keyboards into proximity)
