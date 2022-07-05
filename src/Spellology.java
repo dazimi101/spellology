@@ -7,7 +7,7 @@ import javax.swing.JTextField;
 import javax.swing.JOptionPane;
 
 public class Spellology {
-  public static String appName = "Spellology";
+  public static String name = "Spellology";
   public static String textName = "Thus Spoke Zarathustra by Nietzsche";
 
   public static void addToPane(Container pane) {
@@ -54,11 +54,11 @@ public class Spellology {
         } else if (spellologyApp.spellCheckStatus(inputWord).equalsIgnoreCase("NO_CHECK_NEEDED")) {
           message = "<html>Based on the reference text, <em>" + textName + "</em>, <b>" + inputWord
               + "</b> is correctly spelled.";
-          JOptionPane.showMessageDialog((Component) null, message, appName, JOptionPane.PLAIN_MESSAGE);
+          JOptionPane.showMessageDialog((Component) null, message, name, JOptionPane.PLAIN_MESSAGE);
         } else if (spellologyApp.spellCheckStatus(inputWord).equalsIgnoreCase("NO_CHECK_FOUND")) {
           message = "<html>Spellcast can not decide whether or not <b>" + inputWord
               + "</b> is correctly spelled based on the reference text, <em>" + textName + "</em>. <br><br><center>Please try a different word.<html>";
-          JOptionPane.showMessageDialog((Component) null, message, appName, JOptionPane.PLAIN_MESSAGE);
+          JOptionPane.showMessageDialog((Component) null, message, name, JOptionPane.PLAIN_MESSAGE);
         }
       }
     };
@@ -74,7 +74,7 @@ public class Spellology {
 
   private static void createGUI() {
     // Generate the spellcast window
-    JFrame f = new JFrame(appName);
+    JFrame f = new JFrame(name);
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     // Set up the content pane
