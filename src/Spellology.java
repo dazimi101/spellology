@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Spellology {
   public static String appName = "Spellology";
+  public static String textName = "Thus Spoke Zarathustra by Nietzsche";
 
   public static void addToPane(Container pane) {
     pane.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
@@ -51,12 +52,12 @@ public class Spellology {
           spellCheckWord = spellologyApp.findReplacement();
           input.setText(spellCheckWord);
         } else if (spellologyApp.spellCheckStatus(inputWord).equalsIgnoreCase("NO_CHECK_NEEDED")) {
-          message = "<html>Based on the reference text, <em>Thus Spoke Zarathustra</em> by Nietzsche, <b>" + inputWord
+          message = "<html>Based on the reference text, <em>" + textName + "</em>, <b>" + inputWord
               + "</b> is correctly spelled.";
           JOptionPane.showMessageDialog((Component) null, message, appName, JOptionPane.PLAIN_MESSAGE);
         } else if (spellologyApp.spellCheckStatus(inputWord).equalsIgnoreCase("NO_CHECK_FOUND")) {
           message = "<html>Spellcast can not decide whether or not <b>" + inputWord
-              + "</b> is correctly spelled based on the reference text, <em>Thus Spoke Zarathustra</em> by Nietzsche. <br><br><center>Please try a different word.<html>";
+              + "</b> is correctly spelled based on the reference text, <em>" + textName + "</em>. <br><br><center>Please try a different word.<html>";
           JOptionPane.showMessageDialog((Component) null, message, appName, JOptionPane.PLAIN_MESSAGE);
         }
       }
