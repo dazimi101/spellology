@@ -12,7 +12,7 @@
 Spellology is a Java GUI (Swing) based spell checker that validates a user's inputted word. If the user's word is incorrectly spelled, then spellology replaces the user's word directly in the text field. If spellology thinks the word is spelled incorrectly or can not validate the word, a corresponding pop up appears. The validation process utilizes a database of words and their frequencies based on a certain philosophical text. 
 
 ## Details
-First version (w/ Swing) complete (July 4 2022) but project still [active](#future-improvements). 
+First version (w/ Swing) complete (July 4 2022), project no longer active (may return in future).
 
 **Spellology.java**
 
